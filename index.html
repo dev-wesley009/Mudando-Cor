@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Troca de Cor</title>
+</head>
+<body>
+    <h1>Clique para mudar a cor do fundo</h1>
+    <button id="botao">Mudar a Cor</button>
+
+    <script>
+        const botao = document.getElementById('botao');
+        const cores = ["#f1c40f", "#e74c3c", "#9b59b6", "#2ecc71", "#1abc9c", "#34495e"];
+
+        botao.addEventListener("click", function() {
+            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            document.body.style.backgroundColor = corAleatoria;
+
+        });
+    </script>
+</body>
+</html>
